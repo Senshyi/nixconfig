@@ -65,6 +65,9 @@
     };
 
     programs.firefox.enable = true;
+    programs.zoxide.enable = true;
+    programs.yazi.enable = true;
+    programs._1password.enable = true;
 
     nixpkgs.config.allowUnfree = true;
 
@@ -83,6 +86,8 @@
       bat
       ripgrep
       tree
+
+      google-chrome
       # icons
       adwaita-icon-theme 
       hicolor-icon-theme # The "fallback" theme that many apps depend on
