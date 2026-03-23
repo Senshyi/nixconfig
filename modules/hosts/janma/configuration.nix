@@ -83,6 +83,9 @@
       bat
       ripgrep
       tree
+      # icons
+      adwaita-icon-theme 
+      hicolor-icon-theme # The "fallback" theme that many apps depend on
     ];
 
     system.stateVersion = "25.11"; # Did you read the comment?
