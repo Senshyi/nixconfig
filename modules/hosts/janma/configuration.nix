@@ -8,7 +8,7 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    networking.hostName = "nixos"; # Define your hostname.
+    networking.hostName = "janma"; # Define your hostname.
 
     networking.networkmanager.enable = true;
 
@@ -65,6 +65,12 @@
     programs.firefox.enable = true;
 
     nixpkgs.config.allowUnfree = true;
+
+    nix.gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+    };
 
     environment.systemPackages = with pkgs; [
       neovim
