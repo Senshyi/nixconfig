@@ -35,6 +35,8 @@
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
     services.gnome.core-developer-tools.enable = true;
+
+    services.fstrim.enable = true;
   
 
     services.xserver.xkb = {
