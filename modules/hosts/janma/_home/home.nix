@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
 
   home.username = "janma";
   home.homeDirectory = "/home/janma";
@@ -10,11 +10,14 @@
     };
   };
 
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink /home/janma/nixconfig/dotfiles/nvim;
+
   programs.zoxide.enable = true;
   programs.yazi.enable = true;
 
   home.packages = with pkgs; [
     neovim
+    nixd
     ghostty
     git
     tealdeer
