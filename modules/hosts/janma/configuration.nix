@@ -87,6 +87,8 @@
       bat
       ripgrep
       tree
+      opencode
+      claude-code
 
       google-chrome
       # icons
