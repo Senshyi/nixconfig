@@ -4,6 +4,12 @@
   home.homeDirectory = "/home/janma";
   home.stateVersion = "25.11";
 
+  dconf.settings = {
+    "org/gnome/desktop/input-sources" = {
+      xkb-options = [ "caps:escape" ];
+    };
+  };
+
   programs.zoxide.enable = true;
   programs.yazi.enable = true;
 

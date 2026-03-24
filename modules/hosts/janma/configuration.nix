@@ -38,7 +38,10 @@
 
     services.fstrim.enable = true;
 
-    services.xserver.xkb.layout = "us";
+    services.xserver.xkb = {
+      layout = "us";
+      options = "caps:escape";
+    };
 
     services.printing.enable = true;
 
