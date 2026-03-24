@@ -37,12 +37,8 @@
     services.gnome.core-developer-tools.enable = true;
 
     services.fstrim.enable = true;
-  
 
-    services.xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
+    services.xserver.xkb.layout = "us";
 
     services.printing.enable = true;
 
@@ -59,14 +55,9 @@
       isNormalUser = true;
       description = "janma";
       extraGroups = [ "networkmanager" "wheel" ];
-      packages = with pkgs; [
-      #  thunderbird
-      ];
     };
 
     programs.firefox.enable = true;
-    programs.zoxide.enable = true;
-    programs.yazi.enable = true;
     programs._1password.enable = true;
     programs._1password-gui.enable = true;
 
@@ -79,23 +70,10 @@
     };
 
     environment.systemPackages = with pkgs; [
-      neovim
-      ghostty
-      git
-      tealdeer
-      xclip
-      bat
-      ripgrep
-      tree
-      opencode
-      claude-code
-
-      google-chrome
-      # icons
-      adwaita-icon-theme 
-      hicolor-icon-theme # The "fallback" theme that many apps depend on
+      adwaita-icon-theme
+      hicolor-icon-theme
     ];
 
-    system.stateVersion = "25.11"; # Did you read the comment?
+    system.stateVersion = "25.11";
   };
 }
