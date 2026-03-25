@@ -12,16 +12,29 @@
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink /home/janma/nixconfig/dotfiles/nvim;
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
+  programs.git = {
+    enable = true;
+    settings = {
+      user = {
+        name = "Senshyi";
+        email = "janmachacek97@gmail.com";
+      };
+    };
+  };
+
   programs.zoxide.enable = true;
   programs.yazi.enable = true;
 
   home.packages = with pkgs; [
-    neovim
     nixd
     ghostty
-    git
     tealdeer
-    xclip
+    wl-clipboard
     bat
     ripgrep
     tree
