@@ -29,7 +29,6 @@
 
   programs.zoxide.enable = true;
   programs.yazi.enable = true;
-
   home.packages = with pkgs; [
     nixd
     ghostty
@@ -41,5 +40,9 @@
     opencode
     claude-code
     google-chrome
+
+    # niri companion tools
+    brightnessctl
+    playerctl
   ];
 }
