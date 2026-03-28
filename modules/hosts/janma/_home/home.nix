@@ -45,6 +45,11 @@
     tree
     opencode
     claude-code
+
+    # C development
+    gcc
+    gnumake
+    gdb
     google-chrome
     anki
     file-roller
