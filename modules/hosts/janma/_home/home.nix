@@ -8,6 +8,12 @@
     "org/gnome/desktop/input-sources" = {
       xkb-options = [ "caps:escape" ];
     };
+    "org/gnome/desktop/peripherals/touchpad" = {
+      natural-scroll = true;
+    };
+    "org/gnome/desktop/peripherals/mouse" = {
+      natural-scroll = true;
+    };
   };
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink /home/janma/nixconfig/dotfiles/nvim;
@@ -40,6 +46,9 @@
     opencode
     claude-code
     google-chrome
+    anki
+    file-roller
+    qbittorrent
 
     # niri companion tools
     brightnessctl

@@ -71,6 +71,17 @@
       options = "--delete-older-than 14d";
     };
 
+    fonts.packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+    ];
+
+    fonts.fontconfig.defaultFonts = {
+      sansSerif = [ "Noto Sans CJK JP" ];
+      serif = [ "Noto Serif CJK JP" ];
+    };
+
     environment.systemPackages = with pkgs; [
       adwaita-icon-theme
       hicolor-icon-theme
